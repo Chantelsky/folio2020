@@ -1,0 +1,68 @@
+.intro {
+    padding-left: 4rem;
+    padding-top: 1.5rem;
+    
+    h1{
+        line-height: 4rem;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+        color: #000;
+        font-weight: 500;
+    }
+
+    span{
+        background: var(--yellow);
+    }
+}
+
+.about{
+    padding-left: 2rem;
+    
+
+    h1{
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        color: #000;
+        width: 65%;
+        font-weight: 500;
+    }
+}
+
+.images{
+    display: flex;
+    justify-content:flex-end;
+    width: 100%;
+    position: relative;
+    bottom: 390px;
+    z-index: -1;
+
+    .selfie{
+        width: 600px;
+        position: relative;
+        left: 30%;
+    }
+}
+
+.social{
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 1.5rem;
+    position:absolute;
+    transform: translate(65%,100%);
+    left: 50%;
+    bottom: 20%;
+}
+
+.lfwork{
+    display:flex;
+    text-transform: uppercase;
+    line-height: 1rem;
+    font-weight: 900;
+    padding-left: 1rem;
+    position:relative;
+    top: 400px;
+
+    p {
+        padding-left: 1rem;
+    }
+}

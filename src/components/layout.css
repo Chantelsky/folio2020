@@ -1,9 +1,13 @@
+:root {
+  --yellow:#FFD662;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  font-family: "Helvetica";
+  font-family: Helvetica;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,6 +47,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
@@ -200,7 +205,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-weight: normal;
+  font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -491,6 +496,7 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  list-style: none;
 }
 ol li {
   padding-left: 0;

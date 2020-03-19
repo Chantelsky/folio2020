@@ -1,0 +1,39 @@
+.footer {
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+
+    .footerContainer{
+        background: #000;
+        width: 90%;
+        padding:2rem;
+        height: 300px;
+
+        h4,p{
+            font-weight: 100;
+        }
+
+        .contactMe{
+            color: #fff;
+            a{
+                border-bottom: 1px solid #fff;
+                font-weight: 100;
+                color: #fff;
+            }
+        }
+    }
+
+    img {
+        width: 20%;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        
+    }
+
+    .credit{
+        margin: 0 auto;
+        text-align: center;
+        color: #C4C4C4;
+    }
+}
