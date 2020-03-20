@@ -8,6 +8,7 @@
     "babel-plugin-prismjs": "^2.0.1",
     "babel-preset-gatsby": "^0.2.36",
     "gatsby": "^2.19.45",
+    "gatsby-cli": "^2.11.0",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-google-analytics": "^2.1.38",
     "gatsby-plugin-manifest": "^2.2.48",

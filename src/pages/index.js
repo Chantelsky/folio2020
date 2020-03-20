@@ -1,12 +1,13 @@
 import React from "react"
+import { graphql } from 'gatsby'
 // import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styles from "../components/index.module.scss"
 import Dot from '../images/dotBackground.svg'
-import Photo from '../images/chantel.jpg'
 import Arrow from '../images/arrowRight.svg'
 import SocialLinks from '../components/socialLinks'
+import Img from 'gatsby-image'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -21,7 +22,7 @@ const IndexPage = ({ data }) => (
     </div>
 
     <div className={styles.lfwork}>
-      <img src={Arrow}/>
+      <img src={Arrow} alt="arrow svg"/>
         <p>Currently looking for a full-time position
         <div>that enables me to code using a modern tech stack</div></p>
       </div>
@@ -29,9 +30,22 @@ const IndexPage = ({ data }) => (
     <div className={styles.social}><SocialLinks text="black"/></div>
 
     <div className={styles.images}>
-      <img className={styles.selfie} src={Photo} alt="Chantel Laver"/>
-      <img className={styles.background} src={Dot}/>
+      <Img className={styles.selfie} fixed={data.chantel.childImageSharp.fixed} alt="A photo of Chantel" />
+      <img className={styles.background} src={Dot}alt="background"/>
       </div>
+      
+      <div className={styles.projectCardRow1}>
+        <Img fixed={data.devsound.childImageSharp.fixed} alt="devsound project"/>
+        <Img fixed={data.crownstudio.childImageSharp.fixed} alt="crownstudio project"/>
+        <Img fixed={data.baseapparel.childImageSharp.fixed} alt="baseapparel project"/>
+      </div>
+
+      <div className={styles.projectCardRow2}>
+      <Img fixed={data.devsound.childImageSharp.fixed} alt="devsound project"/>
+      <Img fixed={data.crownstudio.childImageSharp.fixed} alt="crownstudio project"/>
+      <Img fixed={data.baseapparel.childImageSharp.fixed} alt="baseapparel project"/>
+      </div>
+      {console.log(data)}
   </Layout>
 )
 
@@ -48,15 +62,21 @@ query {
     baseapparel: file(relativePath: {eq: "baseapparel.jpg"}) {
         ...projectImage
     }
+    chantel: file(relativePath: {eq: "chantel.jpg"}) {
+      childImageSharp{
+        fixed(width: 600, height:800){
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
 }
 `
 export const projectImage = graphql`
 fragment  projectImage on File {
     childImageSharp{
-        fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed
+        fixed(width: 500, height: 500) {
+          ...GatsbyImageSharpFixed
         }
     }
 }
 `
-

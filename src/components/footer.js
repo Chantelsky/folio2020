@@ -25,7 +25,7 @@ export default function Footer(){
                     </div>
                     <SocialLinks text ="white"/>
                 </div>
-                <img src={dots}/>
+                <img src={dots} alt="background"/>
             </footer>
     )
 }
