@@ -8,6 +8,7 @@ import Dot from '../images/dotBackground.svg'
 import Arrow from '../images/arrowRight.svg'
 import SocialLinks from '../components/socialLinks'
 import Img from 'gatsby-image'
+import ProjectCard from "../components/projectCard"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -31,19 +32,17 @@ const IndexPage = ({ data }) => (
 
     <div className={styles.images}>
       <Img className={styles.selfie} fixed={data.chantel.childImageSharp.fixed} alt="A photo of Chantel" />
-      <img className={styles.background} src={Dot}alt="background"/>
+      <img className={styles.background} src={Dot}alt=" "/>
       </div>
       
-      <div className={styles.projectCardRow1}>
-        <Img fixed={data.devsound.childImageSharp.fixed} alt="devsound project"/>
-        <Img fixed={data.crownstudio.childImageSharp.fixed} alt="crownstudio project"/>
-        <Img fixed={data.baseapparel.childImageSharp.fixed} alt="baseapparel project"/>
+      <div className={styles.row}>
+      <ProjectCard path={data.devsound.childImageSharp.fixed} title="DevSound - February | In Progress" />
+      <ProjectCard path={data.crownstudio.childImageSharp.fixed} title="CrownStudio" />
+      <ProjectCard path={data.baseapparel.childImageSharp.fixed} title="Base Apparel" />
       </div>
 
-      <div className={styles.projectCardRow2}>
-      <Img fixed={data.devsound.childImageSharp.fixed} alt="devsound project"/>
-      <Img fixed={data.crownstudio.childImageSharp.fixed} alt="crownstudio project"/>
-      <Img fixed={data.baseapparel.childImageSharp.fixed} alt="baseapparel project"/>
+      <div className={styles.contact}>
+        <h1>Contact Me Contact Me Contact Me Contact Me</h1>
       </div>
       {console.log(data)}
   </Layout>
@@ -74,7 +73,7 @@ query {
 export const projectImage = graphql`
 fragment  projectImage on File {
     childImageSharp{
-        fixed(width: 500, height: 500) {
+        fixed(width: 800, height: 400) {
           ...GatsbyImageSharpFixed
         }
     }

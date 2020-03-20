@@ -66,3 +66,38 @@
         padding-left: 1rem;
     }
 }
+
+  .row{
+      display:flex;
+      justify-content: space-between;
+      padding-bottom: 4rem;
+
+      img {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+
+        &:hover{
+            filter:grayscale(0%);
+            -webkit-filter: grayscale(0%);
+        }
+      }
+  }
+
+.contact{
+    h1{
+        font-size:4vw;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: -1.5rem;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        transform:translate(2%, 0);
+        border-top: 1px solid #000;
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
