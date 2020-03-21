@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 const path = require(`path`)
 
-exports.createPages = async({graphql, actions, reporter}) => {
+exports.createPages = async ({graphql, actions, reporter}) => {
     const { createPage } = actions
     const ProjectPage = path.resolve("./src/templates/project.js")
 
@@ -16,7 +16,8 @@ exports.createPages = async({graphql, actions, reporter}) => {
         title: "Devsound - In progress",
         description:"Building a Fullstack application thaat uses the spotify API to connect developers through music.",
         techstack: ["Create React App", "CSS modules", "POSTCSS & SCSS", "NodeJS"],
-        path: "devsound"
+        path: "devsound",
+        link: "https://github.com/Chantelsky/devsound"
         },
         {
             title: "Crown Studio",
@@ -37,9 +38,10 @@ exports.createPages = async({graphql, actions, reporter}) => {
             path:`/${project.path}`,
             component: ProjectPage,
             context: {
-                title: `${project.title}`,
-                description: `${project.description}`,
-                techstack: `${project.techstack}`,
+                title: project.title,
+                description: project.description,
+                techstack: [project.techstack],
+                link: project.link
             },
         })
     })
