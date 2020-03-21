@@ -10,12 +10,12 @@ const ProjectCard = ({path, title}) => {
             <div 
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={()=> setIsShown(false)}>
-                    <Img fixed={path} />
                     {isShown && (
                         <div>
-                            {title}
+                            <p>{title}</p>
                         </div>
                     )}
+                    <Img fixed={path} />
             </div>
         </div>
     )

@@ -71,6 +71,7 @@
       display:flex;
       justify-content: space-between;
       padding-bottom: 4rem;
+      position: relative;
 
       img {
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -80,6 +81,17 @@
             filter:grayscale(0%);
             -webkit-filter: grayscale(0%);
         }
+      }
+
+      p {
+          text-transform:uppercase;
+          font-weight: 600;
+          position: absolute;
+          bottom: 100%;
+          padding-left: 2rem;
+          z-index: 1;
+          animation: fadeIn ease 2s;
+          
       }
   }
 
@@ -99,5 +111,15 @@
         width: 95%;
         text-align: center;
         margin: 0 auto;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
 }

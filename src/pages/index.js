@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => (
       <div className={styles.row}>
       <ProjectCard path={data.devsound.childImageSharp.fixed} title="DevSound - February | In Progress" />
       <ProjectCard path={data.crownstudio.childImageSharp.fixed} title="CrownStudio" />
-      <ProjectCard path={data.baseapparel.childImageSharp.fixed} title="Base Apparel" />
+      <ProjectCard path={data.bookmark.childImageSharp.fixed} title="Bookmark" />
       </div>
 
       <div className={styles.contact}>
@@ -60,6 +60,9 @@ query {
     }
     baseapparel: file(relativePath: {eq: "baseapparel.jpg"}) {
         ...projectImage
+    }
+    bookmark: file(relativePath: {eq: "bookmark.jpg"}) {
+      ...projectImage
     }
     chantel: file(relativePath: {eq: "chantel.jpg"}) {
       childImageSharp{
