@@ -27,6 +27,9 @@ const Project = (props, {data}) => {
           <a href={props.pathContext.link}>GITHUB</a>
         {console.log(props)}
       </div>
+      <div className={styles.next}>
+        <a href={props.pathContext.next}><h1>next project next project next project</h1></a>
+      </div>
     </Layout>
   )
 }
@@ -55,7 +58,7 @@ query {
 export const FullProjectImage = graphql`
 fragment FullImage on File {
     childImageSharp{
-        fluid(maxWidth: 1920, quality: 100) {
+        fluid(maxWidth: 1800, quality: 100) {
           ...GatsbyImageSharpFluid
         }
     }

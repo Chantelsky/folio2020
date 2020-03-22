@@ -1,0 +1,54 @@
+.images{
+    padding: 3rem 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.project{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    
+    h1{
+        text-transform: uppercase;
+    }
+
+   a{
+       color: #000;
+       font-weight: 700;
+       text-decoration: underline;
+   }
+}
+
+.next{
+    margin: 0 1rem;
+    h1{
+        font-size:4vw;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: -1.5rem;
+    }
+
+    &:hover{
+        background: #000;
+    }
+
+    a {
+        color: #000;
+
+        &:hover{
+            color: #fff;
+        }
+
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        transform:translate(2%, 0);
+        border-top: 1px solid #000;
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

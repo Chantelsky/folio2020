@@ -9,6 +9,7 @@ import Arrow from '../images/arrowRight.svg'
 import SocialLinks from '../components/socialLinks'
 import Img from 'gatsby-image'
 import ProjectCard from "../components/projectCard"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -36,13 +37,16 @@ const IndexPage = ({ data }) => (
       </div>
       
       <div className={styles.row}>
-      <ProjectCard path={data.devsound.childImageSharp.fixed} title="DevSound - February | In Progress" />
-      <ProjectCard path={data.crownstudio.childImageSharp.fixed} title="CrownStudio" />
-      <ProjectCard path={data.bookmark.childImageSharp.fixed} title="Bookmark" />
+        <AniLink paintDrip to="/devsound" hex="#000"><ProjectCard path={data.devsound.childImageSharp.fixed} title="DevSound - February | In Progress" /></AniLink>
+
+      <AniLink paintDrip to ="/crownstudio" hex="#000"><ProjectCard path={data.crownstudio.childImageSharp.fixed} title="CrownStudio" /></AniLink>
+
+      <AniLink paintDrip to ="/bookmark" hex="#000">
+      <ProjectCard path={data.bookmark.childImageSharp.fixed} title="Bookmark" /></AniLink>
       </div>
 
       <div className={styles.contact}>
-        <h1>Contact Me Contact Me Contact Me Contact Me</h1>
+        <a href=""><h1>Contact Me Contact Me Contact Me</h1></a>
       </div>
       {console.log(data)}
   </Layout>

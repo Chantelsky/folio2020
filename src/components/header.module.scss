@@ -1,6 +1,13 @@
 .header {
-    color: #fff;
     background: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 30px;
+
+    a {
+        color: #fff;
+    }
 
     p{
         text-transform: uppercase;
