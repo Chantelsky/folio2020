@@ -1,0 +1,23 @@
+.landing {
+    margin: 0 auto;
+    transform: translate(20%,100%);
+}
+
+.about {
+    z-index: 2;
+    padding-top: 0rem;
+
+    h1 {
+        text-transform: uppercase;
+        color: #F43A3A;
+        color: #000;
+        font-weight: 800;
+        font-size: 4rem;
+    }
+
+    p {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        width: 400px;
+    }
+}
