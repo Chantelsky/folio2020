@@ -1,17 +1,9 @@
 .header {
-    background: #000;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    height: 30px;
-
+    margin-top: 2rem;
     a {
-        color: #fff;
-    }
-
-    p{
+        color: #000;
+        text-decoration: none;
         text-transform: uppercase;
-        font-weight: 200;
-        padding-left: 1rem;
+        margin: 2rem;
     }
 }
