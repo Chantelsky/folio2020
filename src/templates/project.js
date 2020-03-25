@@ -1,11 +1,13 @@
 import React from 'react'
-import Layout from "../components/layout"
 import styles from "../components/project.module.scss"
 import Img from 'gatsby-image'
 
+import Header from "../components/Header"
+
 const Project = (props, {data}) => {
   return (
-    <Layout>
+    <main>
+      <Header />
       <div className={styles.images}>
         {props.path === "/devsound" ?
         <><Img fluid={props.data.devsound.childImageSharp.fluid}/>
@@ -30,7 +32,7 @@ const Project = (props, {data}) => {
       <div className={styles.next}>
         <a href={props.pathContext.next}><h1>next project next project next project</h1></a>
       </div>
-    </Layout>
+    </main>
   )
 }
 
