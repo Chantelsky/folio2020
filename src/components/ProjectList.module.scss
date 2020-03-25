@@ -1,0 +1,44 @@
+.projectContainer{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: space-evenly;
+    padding: 5rem;
+
+    h1{
+        font-weight: 500;
+        font-size: 8rem;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+}
+
+.project{
+    padding: 1rem;
+    background: #F9F9F9;
+
+    h3{
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .title{
+        p{
+            margin-top: -1.5rem;
+        }
+    }
+
+    .date{
+        font-weight: 100;
+        padding-top: 3rem;
+        color: #A5A5A5;
+    }
+}
+
+.project:nth-child(2){
+    border-left: 1px solid #707070;
+    border-right: 1px solid #707070;
+}

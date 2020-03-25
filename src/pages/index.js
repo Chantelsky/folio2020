@@ -31,33 +31,12 @@ export default IndexPage
 
 export const query = graphql`
 query {
-    devsound: file(relativePath:{eq: "devsound.png"}) {
-        ...projectImage
-    }
-    crownstudio: file(relativePath:{eq: "crownstudiolanding.png"}) {
-        ...projectImage
-    }
-    baseapparel: file(relativePath: {eq: "baseapparel.jpg"}) {
-        ...projectImage
-    }
-    bookmark: file(relativePath: {eq: "bookmark.jpg"}) {
-      ...projectImage
-    }
     flower: file(relativePath: {eq: "flower2.jpg"}) {
       childImageSharp{
         fixed(width: 900, height:600){
           ...GatsbyImageSharpFixed
         }
       }
-    }
-}
-`
-export const projectImage = graphql`
-fragment  projectImage on File {
-    childImageSharp{
-        fixed(width: 800, height: 400) {
-          ...GatsbyImageSharpFixed
-        }
     }
 }
 `
