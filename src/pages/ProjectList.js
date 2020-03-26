@@ -17,7 +17,7 @@ const ProjectList =(props) => {
                     <h3>Devsound</h3>
                     <p>Fullstack developer & Designer</p>
                     </div>
-                    <Img fixed={props.data.devsound.childImageSharp.fixed} />
+                    <a href="/devsound"><Img fixed={props.data.devsound.childImageSharp.fixed} /></a>
                     <div className={style.date}><p>2020.02.21 In Progress</p></div>
                 </div>
                 <div className={style.project}>
@@ -26,8 +26,8 @@ const ProjectList =(props) => {
                     <h3>CrownStudio</h3>
                     <p>Frontend developer & Designer</p>
                     </div>
-                    <Img fixed={props.data.crownstudio.childImageSharp.fixed} />
-                    <div className={style.date}><p>date</p></div>
+                    <a href="/crownstudio"><Img fixed={props.data.crownstudio.childImageSharp.fixed} /></a>
+                    <div className={style.date}><p>2019.10.15</p></div>
                 </div>
                 <div className={style.project}>
                     <h1>03</h1>
@@ -35,8 +35,8 @@ const ProjectList =(props) => {
                     <h3>Bookmark</h3>
                     <p>Frontend developer</p>
                     </div>
-                    <Img fixed={props.data.bookmark.childImageSharp.fixed} />
-                    <div className={style.date}><p>date</p></div>
+                    <a href="/bookmark"><Img fixed={props.data.bookmark.childImageSharp.fixed} /></a>
+                    <div className={style.date}><p>2019.10.11</p></div>
                 </div>
             </div>
         </main>

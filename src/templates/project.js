@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../components/project.module.scss"
+import style from "../components/project.module.scss"
 import Img from 'gatsby-image'
 
 import Header from "../components/Header"
@@ -8,29 +8,41 @@ const Project = (props, {data}) => {
   return (
     <main>
       <Header />
-      <div className={styles.images}>
-        {props.path === "/devsound" ?
-        <><Img fluid={props.data.devsound.childImageSharp.fluid}/>
-        <Img fluid={props.data.devsoundProfile.childImageSharp.fluid}/></>
-        : null}
-        {props.path === "/crownstudio" ?
-        <Img fluid={props.data.crownstudio.childImageSharp.fluid}/> : null}
-        {props.path=== "/bookmark" ? <Img fluid={props.data.bookmark.childImageSharp.fluid}/> :null}
+      <div className={style.close}><a href="/ProjectList">Close</a></div>
+
+      <div className={style.pageContainer}>
+        <div className={style.projectInfo}>
+        <h1>{props.pageContext.number}</h1>
+
+        <div className={style.heading}>
+        <p>project</p>
+          <h2>{props.pageContext.title}</h2>
         </div>
 
-      <div className={styles.project}>
-        <h1>{props.pathContext.title}</h1>
-        <p>{props.pathContext.description}</p>
-        <ul>
-            {props.pathContext.techstack[0].map(stack => {
-              return(<li>{stack}</li>)
-            })}
-        </ul>
-          <a href={props.pathContext.link}>GITHUB</a>
-        {console.log(props)}
-      </div>
-      <div className={styles.next}>
-        <a href={props.pathContext.next}><h1>next project next project next project</h1></a>
+          <p>{props.pageContext.description}</p>
+          
+          <div className={style.stack}>
+            <ul>
+              <p>Tech Stack</p>
+              {props.pageContext.techstack[0].map(stack => {
+                return(<li>{stack}</li>)
+              })}
+            </ul>
+          </div>
+
+          <a href={props.pageContext.link}>GITHUB</a>
+          </div>  
+          <div className={style.imgages}>
+            {props.path === "/devsound" ?
+            <>
+            <div className={style.devsound}><Img fixed={props.data.devsound.childImageSharp.fixed}/>
+            <Img fixed={props.data.devsoundProfile.childImageSharp.fixed}/></div>
+            </>
+            : null}
+            {props.path === "/crownstudio" ?
+            <Img fixed={props.data.crownstudio.childImageSharp.fixed}/> : null}
+            {props.path=== "/bookmark" ? <Img fixed={props.data.bookmark.childImageSharp.fixed}/> :null}
+            </div>
       </div>
     </main>
   )
@@ -49,9 +61,6 @@ query {
     crownstudio: file(relativePath:{eq: "crownstudiofull.png"}) {
         ...FullImage
     }
-    baseapparel: file(relativePath: {eq: "baseapparel.jpg"}) {
-        ...FullImage
-    }
     bookmark: file(relativePath: {eq: "bookmark.jpg"}) {
       ...FullImage
   }
@@ -60,8 +69,8 @@ query {
 export const FullProjectImage = graphql`
 fragment FullImage on File {
     childImageSharp{
-        fluid(maxWidth: 1800, quality: 100) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 1000) {
+          ...GatsbyImageSharpFixed
         }
     }
 }
