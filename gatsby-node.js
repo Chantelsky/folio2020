@@ -13,12 +13,12 @@ exports.createPages = async ({graphql, actions, reporter}) => {
 
     const projects = [
         {
-        title: "Devsound - In progress",
-        description:"Building a Fullstack application thaat uses the spotify API to connect developers through music.",
+        title: "Devsound",
+        description:"Devsound is a web app that uses Spotify API to connect developers through music. Users can login with their Spotify credentials and have instant access to the most popular music other developers listen to.",
         techstack: ["Create React App", "CSS modules", "POSTCSS & SCSS", "NodeJS"],
         path: "devsound",
         link: "https://github.com/Chantelsky/devsound",
-        next: "crownstudio"
+        number: "001"
         },
         {
             title: "Crown Studio",
@@ -26,7 +26,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
             techstack: ["ReactJS","JavaScript","HTML5","CSS3","SCSS"],
             path: "crownstudio",
             link: "https://github.com/Chantelsky/CrownStudio",
-            next:"bookmark"
+            number:"002"
         },
         {
             title: "Bookmark",
@@ -34,7 +34,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
             techstack:["JavaScript","HTML5","CSS3","SCSS"],
             path: "bookmark",
             link:"https://github.com/Chantelsky/bookmark-landingpage",
-            next: "devsound"
+            number: "003"
         }
     ]
 
@@ -47,7 +47,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                 description: project.description,
                 techstack: [project.techstack],
                 link: project.link,
-                next: project.next
+                number: project.number
             },
         })
     })
