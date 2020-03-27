@@ -30,7 +30,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
         },
         {
             title: "Bookmark",
-            description:"A landing page for a simple bookmark manager.",
+            description:"Bookmark was a challenge hosted by Frontend Mentors. The purpose of the challenge was to develop the landing page based soley off of screenshots of the final design. I was provided with active states, images, and a styling guide",
             techstack:["JavaScript","HTML5","CSS3","SCSS"],
             path: "bookmark",
             link:"https://github.com/Chantelsky/bookmark-landingpage",

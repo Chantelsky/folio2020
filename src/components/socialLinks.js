@@ -6,10 +6,10 @@ const SocialLinks = () => {
         <div className={styles.social}>
             <ul>
                 <li>
-                    <a href="#">GIT</a>
-                    <a href="#">Codepen</a>
-                    <a href="#">Behance</a>
-                    <a href="#">Linkedin</a>
+                    <a href="https://github.com/Chantelsky">GIT</a>
+                    <a href="https://codepen.io/chantel-sky">Codepen</a>
+                    <a href="https://www.behance.net/chantelsky">Behance</a>
+                    <a href="https://www.linkedin.com/in/chantel-laver-2805a9189/">Linkedin</a>
                     <span></span>
                 </li>
             </ul>

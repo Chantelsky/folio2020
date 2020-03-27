@@ -3,6 +3,7 @@
     left: 38%;
     z-index: -2;
     top: 20%;
+    width: 35%;
 }
 
 .box {
@@ -13,4 +14,62 @@
     z-index: -2;
     top: 10%;
     left: 25%;
+}
+
+@media only screen and (max-width: 1440px){
+    .image{
+        left: 40%;
+        width: 45%;
+        
+        img{
+            width: 200px;
+        }
+    }
+
+    .box{
+        left: 15%;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .box{
+        left: 5%;
+    }
+
+    .image{
+        left:20%;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .image{
+        top: 30%;
+    }
+
+    .box{
+        width:500px;
+        left:10%;
+    }
+}
+
+@media only screen and (max-width:425px){
+    main{
+        height: 100vh;
+    }
+
+    .image{
+        position: absolute;
+        left: 38%;
+        z-index: -2;
+        top: 15%;
+        width: 50%;
+    }
+
+    .box{
+        width: 200px;
+        height: 100px;
+        top: 10%;
+        left: 5%;
+    }
 }

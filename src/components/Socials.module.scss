@@ -26,3 +26,17 @@
         }
     }
 }
+
+@media only screen and (max-width:1440px){
+    .social{
+        li{
+            right: 5%;
+        }
+    }
+}
+
+@media only screen and (max-width:425px){
+    .social{
+        // display: none;
+    }
+}

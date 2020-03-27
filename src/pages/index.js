@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import SEO from "../components/seo"
 import style from "../components/index.module.scss"
 import Img from 'gatsby-image'
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import "../components/layout.css"
 import Header from "../components/Header"
@@ -18,7 +17,7 @@ const IndexPage = (props) => {
       <Header path={props.location.pathname}/>
       <div className={style.box}></div>
       <div className={style.image}>
-        <Img fixed ={props.data.flower.childImageSharp.fixed} />
+        <Img fluid ={props.data.flower.childImageSharp.fluid} />
         </div>
       <Landing />
       <SocialLinks />
@@ -33,8 +32,8 @@ export const query = graphql`
 query {
     flower: file(relativePath: {eq: "flower2.jpg"}) {
       childImageSharp{
-        fixed(width: 900, height:600){
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900, quality:100){
+          ...GatsbyImageSharpFluid
         }
       }
     }

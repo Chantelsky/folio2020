@@ -9,7 +9,6 @@
 
     h1 {
         text-transform: uppercase;
-        color: #F43A3A;
         color: #000;
         font-weight: 800;
         font-size: 4rem;
@@ -19,5 +18,32 @@
         text-transform: uppercase;
         font-size: 1.25rem;
         width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .landing{
+        transform: translate(10%,100%);
+    }
+    
+    .about{
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .landing{
+        transform: translate(10%,30%);
+    }
+    .about{
+        h1{
+            font-size:2rem;
+        }
+
+        p{
+            font-size: 1rem;
+        }
     }
 }
