@@ -4,3 +4,10 @@
     margin: 0 auto;
     font-weight: 300;
 }
+
+@media only screen and (max-width:425px){
+    .footer{
+        position: relative;
+        top: -16%;
+    }
+}

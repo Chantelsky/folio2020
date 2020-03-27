@@ -37,6 +37,12 @@
 
 @media only screen and (max-width:425px){
     .social{
-        // display: none;
+        li{
+           right: -4%;
+        }
+
+        span{
+            display:none;
+        }
     }
 }
