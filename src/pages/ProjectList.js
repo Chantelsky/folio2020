@@ -11,31 +11,34 @@ const ProjectList =(props) => {
             <SEO title="Projects" />
             <Header path={props.location.pathname}/>
             <div className={style.projectContainer}>
+                
                 <div className={style.project}>
                     <h1>01</h1>
                     <div className={style.title}>
                     <h3>Devsound</h3>
                     <p>Fullstack developer & Designer</p>
                     </div>
-                    <a href="/devsound"><Img fixed={props.data.devsound.childImageSharp.fixed} /></a>
+                    <div className={style.imageWrapper}><a href="/devsound"><Img fluid={props.data.devsound.childImageSharp.fluid} /></a></div>
                     <div className={style.date}><p>2020.02.21 In Progress</p></div>
                 </div>
+
                 <div className={style.project}>
                     <h1>02</h1>
                     <div className={style.title}>
                     <h3>CrownStudio</h3>
                     <p>Frontend developer & Designer</p>
                     </div>
-                    <a href="/crownstudio"><Img fixed={props.data.crownstudio.childImageSharp.fixed} /></a>
+                    <div className={style.imageWrapper}><a href="/crownstudio"><Img fluid={props.data.crownstudio.childImageSharp.fluid} /></a></div>
                     <div className={style.date}><p>2019.10.15</p></div>
                 </div>
+
                 <div className={style.project}>
                     <h1>03</h1>
                     <div className={style.title}>
                     <h3>Bookmark</h3>
                     <p>Frontend developer</p>
                     </div>
-                    <a href="/bookmark"><Img fixed={props.data.bookmark.childImageSharp.fixed} /></a>
+                    <div className={style.imageWrapper}><a href="/bookmark"><Img fluid={props.data.bookmark.childImageSharp.fluid} /></a></div>
                     <div className={style.date}><p>2019.10.11</p></div>
                 </div>
             </div>
@@ -53,7 +56,7 @@ query {
     crownstudio: file(relativePath:{eq:"crownstudiolanding.png"}) {
         ...projectImage
     }
-    bookmark: file(relativePath:{eq:"bookmark.jpg"}) {
+    bookmark: file(relativePath:{eq:"bookmarkpreview.jpg"}) {
         ...projectImage
     }
 }
@@ -62,8 +65,8 @@ query {
 export const projectImage = graphql`
 fragment  projectImage on File {
     childImageSharp{
-        fixed(width: 400, height: 400) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 900, quality:100) {
+          ...GatsbyImageSharpFluid
         }
     }
 }
