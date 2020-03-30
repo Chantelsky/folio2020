@@ -1,9 +1,14 @@
+main{
+    min-height: 100vh;
+    height: 100vh;
+    overflow-x: hidden;
+}
 .close{
     a{
         letter-spacing:5px;
         color: #a7a7a7;
-        position: absolute;
-        top: 25%;
+        position: relative;
+        top: 200px;
         padding-left: 4rem;
         font-size: .85rem;
         text-transform: uppercase;
@@ -129,7 +134,7 @@
 @media all and (min-width:768px) and (max-width:1023px){
     .close{
         a{
-            top: 80%;
+            top: 18%;
         }
     }
     
@@ -167,10 +172,10 @@
     }
 }
 
-@media all and (min-width: 480px) and (max-width: 767px){
+@media all and (max-width: 480px) {
     .close{
         a{
-            top: 22%;
+            top: 250px;;
         }
     }
     .pageContainer{
@@ -182,7 +187,7 @@
         }
 
         .images{
-            width: 450px;
+            width: 300px;
             padding: 1rem;
         }
 
@@ -278,7 +283,7 @@ and (orientation: landscape) {
   and (orientation: portrait) {
       .close{
         a{
-            top: 35%;
+            top: 250px;
         }
       }
 

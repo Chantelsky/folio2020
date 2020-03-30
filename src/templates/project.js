@@ -1,12 +1,13 @@
 import React from 'react'
 import style from "../components/project.module.scss"
 import Img from 'gatsby-image'
-
+import SEO from "../components/seo"
 import Header from "../components/Header"
 
 const Project = (props, {data}) => {
   return (
     <main>
+      <SEO title="Project"/>
       <Header />
       <div className={style.close}><a href="/ProjectList">Close</a></div>
 

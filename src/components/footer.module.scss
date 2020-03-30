@@ -5,6 +5,10 @@
     font-weight: 300;
     position: relative;
     top: 10%;
+
+    a{
+        color: #000;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -13,7 +17,7 @@
     }
 }
 
-@media all and (min-width:480px) and (max-width:767px){
+@media all and (max-width:480px){
     .footer{
         top: 40%;
     }

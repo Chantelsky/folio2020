@@ -32,12 +32,13 @@
     }
 }
 
-@media all and (min-width: 480px) and (max-width: 767px){
+@media all and (max-width: 480px){
     .social{
         flex-direction: column;
-        top: 400px;
+        top: 300px;
         left: 0;
         width: 100%;
+        margin: 0 auto;
         text-align: center;
 
         li{
