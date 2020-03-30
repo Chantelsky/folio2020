@@ -3,6 +3,7 @@ import style from "../components/project.module.scss"
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
 import Header from "../components/Header"
+import { graphql } from 'gatsby'
 
 const Project = (props, {data}) => {
   return (

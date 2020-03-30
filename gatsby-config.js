@@ -21,7 +21,7 @@ module.exports = {
       options: {
         custom: {
           families: ["Helvetica"],
-          urls: ["/fonts/fonts.css"],
+          urls: ["fonts/fonts.css"],
         },
       },
     },
