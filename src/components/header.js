@@ -8,7 +8,7 @@ const Header = (props) => {
         <div className={styles.header}>
             <nav>
             {props.path === "/" ? 
-             <Link to="projectList">Projects</Link> : 
+             <Link to="projectlist">Projects</Link> : 
              <Link to="/">Home</Link>}
             </nav>
         </div>
