@@ -201,7 +201,134 @@
  and (orientation: portrait) {
      .close{
          a{
-             top: 30%;
+             top: 35%;
          }
      }
+
+     .pageContainer{
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+            width: 100%;
+        }
+
+        .images{
+            width: 300px;
+        }
+
+        .projectInfo{
+            margin: 0 auto;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            a{
+                padding:10px 50px;
+                margin: 0 auto;
+            }
+        }
+     }
  }
+
+  /* Landscape */
+@media screen 
+and (device-width: 640px) 
+and (device-height: 360px) 
+and (orientation: landscape) {
+    .close{
+        a{
+            top: 30%;
+        }
+    }
+
+    .pageContainer{
+        justify-content: center;
+
+        .images{
+            width: 590px;
+            padding: 0;
+        }
+
+        .projectInfo{
+            padding: 0;
+
+            .heading{
+                margin-top: 2rem;
+            }
+            h1{
+                font-size: 3.5rem;
+                letter-spacing: -5px;
+                width: 50%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .stack{
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* Portrait iphone 6,6s,7 and 8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      .close{
+        a{
+            top: 35%;
+        }
+      }
+
+      .pageContainer{
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+            width: 100%;
+        }
+
+        .images{
+            width: 330px;
+        }
+
+        .projectInfo{
+            margin: 0 auto;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            a{
+                padding:10px 50px;
+                margin: 0 auto;
+            }
+        }
+     }
+  }
+
+  /* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
+  .pageContainer{
+
+    .images{
+        width: 600px;
+    }
+      .projectInfo{
+          .heading{
+              margin-top: 0;
+          }
+          h1{
+            font-size: 4rem;
+            letter-spacing: -5px;
+            width: 50%;
+            text-align: center;
+            margin: 0 auto;
+          }
+      }
+  }
+}
