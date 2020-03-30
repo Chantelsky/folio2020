@@ -3,8 +3,6 @@ import { graphql } from 'gatsby'
 import SEO from "../components/seo"
 import style from "../components/index.module.scss"
 import Img from 'gatsby-image'
-
-import "../components/layout.css"
 import Header from "../components/Header"
 import Landing from "../components/Landing"
 import SocialLinks from "../components/SocialLinks"
