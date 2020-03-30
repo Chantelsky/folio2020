@@ -35,7 +35,7 @@ const Project = (props, {data}) => {
            
           <div className={style.images}>
             {props.path === "/devsound" ?
-            <Img fluid={props.data.devsound.childImageSharp.fluid}/>
+            <Img fluid={props.data.devsoundfullimage.childImageSharp.fluid}/>
             : null}
             {props.path === "/crownstudio" ?
             <Img fluid={props.data.crownstudio.childImageSharp.fluid}/> : null}
@@ -50,7 +50,7 @@ export default Project
 
 export const Image = graphql`
 query {
-    devsound: file(relativePath:{eq: "devsoundfull.png"}) {
+    devsoundfullimage: file(relativePath:{eq: "devsoundfull.png"}) {
         ...FullImage
     }
     crownstudio: file(relativePath:{eq: "crownstudiofull.png"}) {
