@@ -29,19 +29,16 @@ const Project = (props, {data}) => {
               })}
             </ul>
           </div>
-
           <a href={props.pageContext.link}>GITHUB</a>
-          </div>  
-          <div className={style.imgages}>
+          </div>
+           
+          <div className={style.images}>
             {props.path === "/devsound" ?
-            <>
-            <div className={style.devsound}><Img fixed={props.data.devsound.childImageSharp.fixed}/>
-            <Img fixed={props.data.devsoundProfile.childImageSharp.fixed}/></div>
-            </>
+            <Img fluid={props.data.devsound.childImageSharp.fluid}/>
             : null}
             {props.path === "/crownstudio" ?
-            <Img fixed={props.data.crownstudio.childImageSharp.fixed}/> : null}
-            {props.path=== "/bookmark" ? <Img fixed={props.data.bookmark.childImageSharp.fixed}/> :null}
+            <Img fluid={props.data.crownstudio.childImageSharp.fluid}/> : null}
+            {props.path=== "/bookmark" ? <Img fluid={props.data.bookmark.childImageSharp.fluid}/> :null}
             </div>
       </div>
     </main>
@@ -52,10 +49,7 @@ export default Project
 
 export const Image = graphql`
 query {
-    devsound: file(relativePath:{eq: "devsound.png"}) {
-        ...FullImage
-    }
-    devsoundProfile: file(relativePath:{eq: "devsoundProfile.png"}) {
+    devsound: file(relativePath:{eq: "devsoundfull.png"}) {
         ...FullImage
     }
     crownstudio: file(relativePath:{eq: "crownstudiofull.png"}) {
@@ -69,8 +63,8 @@ query {
 export const FullProjectImage = graphql`
 fragment FullImage on File {
     childImageSharp{
-        fixed(width: 1000) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
     }
 }

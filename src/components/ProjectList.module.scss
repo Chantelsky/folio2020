@@ -72,11 +72,17 @@
 
  @media all and (min-width: 1024px) and (max-width: 1280px) {
     .projectContainer{
-        padding: 2rem;
+        padding: 5rem;
+
+        h1{
+            font-size: 5rem;
+            padding-bottom: 4rem;
+        }
     }
 
     .project{
         padding: .5rem;
+        text-align: center;
 
         .imageWrapper{
             width: 300px;
@@ -89,6 +95,10 @@
         flex-direction: column;
         height: initial;
         padding: 2rem;
+        h1{
+            font-size: 5rem;
+            padding-bottom: 1rem;
+        }
     }
 
     .project{
@@ -111,6 +121,11 @@
         flex-direction: column;
         padding: 1rem;
         height: initial;
+
+        h1{
+            font-size: 5rem;
+            padding-bottom: 2rem;
+        }
     }
 
     .project{
@@ -118,7 +133,7 @@
         text-align: center;
 
         .imageWrapper{
-            width: 300px;
+            width: 500px;
             margin: 0 auto;
         }
     }
