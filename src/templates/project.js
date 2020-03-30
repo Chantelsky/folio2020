@@ -2,7 +2,7 @@ import React from 'react'
 import style from "../components/project.module.scss"
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
-import Header from "../components/Header"
+import Header from "../components/header"
 import { graphql } from 'gatsby'
 
 const Project = (props, {data}) => {

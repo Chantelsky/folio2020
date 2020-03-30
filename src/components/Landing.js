@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./Landing.module.scss"
+import style from "./landing.module.scss"
 
 const Landing =() =>{
     return(

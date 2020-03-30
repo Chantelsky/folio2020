@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import SEO from "../components/seo"
-import Header from "../components/Header"
-import style from "../components/ProjectList.module.scss"
+import Header from "../components/header"
+import style from "../components/projectList.module.scss"
 import Img from 'gatsby-image'
 
 const ProjectList =(props) => {

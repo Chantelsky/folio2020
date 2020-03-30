@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Header.module.scss'
+import styles from './header.module.scss'
 import { Link } from "gatsby"
 
 const Header = (props) => {
@@ -8,7 +8,7 @@ const Header = (props) => {
         <div className={styles.header}>
             <nav>
             {props.path === "/" ? 
-             <Link to="ProjectList">Projects</Link> : 
+             <Link to="projectList">Projects</Link> : 
              <Link to="/">Home</Link>}
             </nav>
         </div>
