@@ -38,7 +38,7 @@ const Project = (props, {data}) => {
             <Img fluid={props.data.devsoundfullimage.childImageSharp.fluid}/>
             : null}
             {props.path === "/crownstudio" ?
-            <Img fluid={props.data.crownstudio.childImageSharp.fluid}/> : null}
+            <Img fluid={props.data.crownstudiofullimage.childImageSharp.fluid}/> : null}
             {props.path=== "/bookmark" ? <Img fluid={props.data.bookmark.childImageSharp.fluid}/> :null}
             </div>
       </div>
@@ -53,7 +53,7 @@ query {
     devsoundfullimage: file(relativePath:{eq: "devsoundfull.png"}) {
         ...FullImage
     }
-    crownstudio: file(relativePath:{eq: "crownstudiofull.png"}) {
+    crownstudiofullimage: file(relativePath:{eq: "crownstudiofull.png"}) {
         ...FullImage
     }
     bookmark: file(relativePath: {eq: "bookmark.jpg"}) {
